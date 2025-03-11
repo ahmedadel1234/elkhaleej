@@ -1,0 +1,209 @@
+/* Preloader Styles */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.preloader img {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--white);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hero Slider Styles */
+.slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide:nth-child(1) {
+  background-image: url('../assets/slider1.jpg');
+}
+
+.slide:nth-child(2) {
+  background-image: url('../assets/slider2.jpg');
+}
+
+.slide:nth-child(3) {
+  background-image: url('../assets/slider3.jpg');
+}
+
+.slide:nth-child(4) {
+  background-image: url('../assets/slider4.jpg');
+}
+
+.slide:nth-child(5) {
+  background-image: url('../assets/slider5.jpg');
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 98;
+  transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #128C7E;
+}
+
+/* Error state for form fields */
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: var(--danger);
+}
+
+/* Footer styles that might be missing */
+.footer {
+  background-color: #222;
+  color: var(--white);
+}
+
+.footer-top {
+  padding: 60px 0;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-col h3 {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col h3:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: var(--white);
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  display: flex;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.contact-info i {
+  margin-right: 15px;
+  color: var(--primary-color);
+}
+
+.contact-info a {
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.contact-info a:hover {
+  color: var(--primary-color);
+}
+
+/* RTL support for new elements */
+html[dir="rtl"] .whatsapp-float {
+  left: auto;
+  right: 30px;
+}
+
+html[dir="rtl"] .contact-info i {
+  margin-right: 0;
+  margin-left: 15px;
+}

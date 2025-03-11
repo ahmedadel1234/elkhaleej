@@ -1,0 +1,84 @@
+body {
+  /* background-image: url(../assets/slider-2.jpg);
+  background-size: cover; */
+  min-height: 100vh;
+  background-color: #f4fdf4;
+  background-image: none;
+}
+
+.title h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.products .product {
+  width: 290px;
+  height: 300px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  margin: 25px;
+}
+
+.products .product .img {
+  height: 250px;
+  position: relative;
+}
+
+.products .product .img img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: 0.3s;
+}
+
+.product .title {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  background-color: var(--maincolor);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  border-end-end-radius: 6px;
+  border-end-start-radius: 6px;
+  text-transform: capitalize;
+}
+
+.pd img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.morebtn {
+  width: 90%;
+  background-color: var(--maincolor);
+  padding: 10px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  animation: shaake 3s infinite;
+}
+
+.morebtn a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes shaake {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
