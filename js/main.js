@@ -2,16 +2,16 @@
 const tel = document.getElementById("tel");
 const fb = document.getElementById("fb");
 
-function handleMobileIcons(x) {
-  if (x.matches) {
-    tel.innerHTML = "<i class='fa-solid fa-phone'></i> ";
-    fb.innerHTML = "<i class='fa-brands fa-facebook-f'></i> ";
-  }
-}
+// function handleMobileIcons(x) {
+//   if (x.matches) {
+//     tel.innerHTML = "<i class='fa-solid fa-phone'></i> ";
+//     fb.innerHTML = "<i class='fa-brands fa-facebook-f'></i> ";
+//   }
+// }
 
 var mobileMediaQuery = window.matchMedia("(max-width: 700px)");
-handleMobileIcons(mobileMediaQuery);
-mobileMediaQuery.addListener(handleMobileIcons);
+// handleMobileIcons(mobileMediaQuery);
+// mobileMediaQuery.addListener(handleMobileIcons);
 
 // Main document ready function
 document.addEventListener('DOMContentLoaded', function () {
@@ -19,13 +19,16 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
     const preloader = document.querySelector('.preloader');
     if (preloader) {
+      console.log('Preloader found, fading out...');
       preloader.style.opacity = '0';
       setTimeout(function () {
         preloader.style.display = 'none';
+        console.log('Preloader hidden.');
       }, 500);
+    } else {
+      console.log('Preloader not found.');
     }
   }, 1500);
-
   // Navigation elements
   const mainNav = document.querySelector('.main-nav');
   const navToggle = document.querySelector('.nav-toggle');
